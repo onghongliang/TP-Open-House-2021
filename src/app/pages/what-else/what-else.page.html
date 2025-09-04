@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>What Else?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="full" style="padding: 0px">
+    <ion-item-group>
+      <ion-item-divider color="light" style="padding-top: 10px;">
+        <h2 style="margin-bottom: 8px; color: #ba2929; font-weight: bold;">Temasek Polytechnic</h2>
+      </ion-item-divider>
+      <!-- <ion-item detail [routerLink]="'/about'">About</ion-item> -->
+      <ion-item detail button (click)="openAbout()">About</ion-item>
+      <ion-item detail [routerLink]="'/ccalist'">CCAs</ion-item>
+      <ion-item detail button (click)="openFacilities()">Facilities</ion-item>
+      <ion-item detail [routerLink]="'/faq'">Did You Know...</ion-item>
+      <!-- <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>Herbology
+      </ion-item> -->
+
+      <ion-item-divider color="light">
+        <h2 style="padding-top: 14px; margin-bottom: 8px; color: #ba2929; font-weight: bold;">Get Support</h2>
+      </ion-item-divider>
+      <!-- <ion-item detail [routerLink]="'/aboutapp'">About App</ion-item> -->
+      <ion-item detail [routerLink]="'/developers'">Developers</ion-item>
+       <ion-item detail button (click)="showRatePrompt()">Rate our App!</ion-item>
+      <!-- <ion-item detail button >Rate our App!</ion-item> -->
+      <!-- <ion-item detail (click)="openTerms()">Terms of Use</ion-item>
+      <ion-item detail (click)="openPrivacy()">Privacy Statement</ion-item>
+      <ion-item detail (click)="openReport()">Report Vulnerability</ion-item> -->
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>

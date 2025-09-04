@@ -1,0 +1,297 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contact Us</ion-title>
+  </ion-toolbar>
+<!-- <ion-toolbar class="new-background-color">
+  <img src="https://www.tp.edu.sg/staticfiles/TP/images/About%20TP/topbanner-facilities.jpg">
+</ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card>
+
+    <ion-list lines="none" style="border-radius: 5px !important;">
+      <ion-list-header class="header" mode='md'><strong>Campus Operating Hours</strong></ion-list-header>
+      <ion-item>
+        <ion-label>
+          <ion-row>
+            <ion-col style="width: 80%"><h2>Mondays to Fridays:</h2></ion-col>
+            <ion-col style="width: 20%; text-align: center;"><h2> 06:30 - 22:30</h2></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="width: 80%"><h2>Saturdays:</h2></ion-col>
+            <ion-col style="width: 20%; text-align: center;"><h2> 06:30 - 18:30</h2></ion-col>
+          </ion-row><br>
+          <ion-row>Closed on Sundays and Public Holidays</ion-row>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-list lines="full" mode="md">
+
+      <ion-list-header class="header" mode='md'><strong>Contact Information</strong></ion-list-header>
+      <ion-item mode='md' [routerLink]="'/map'">
+        <ion-icon @slidelefttitle slot="end" name="compass" style="color: crimson"></ion-icon>
+        <ion-label>
+          <h2>Address</h2>
+          <p>21 Tampines Ave 1</p>
+          <p>Singapore 529757</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openMap()">
+        <ion-icon @slidelefttitle slot="end" name="map" style="color: slateblue"></ion-icon>
+        <ion-label>
+          <h2>Campus Map</h2>
+          <p>(with block numbers)</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item mode='md'>
+        <ion-icon @slidelefttitle slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6788 2000</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openTP()">
+        <ion-icon @slidelefttitle slot="end" name="globe" style="color: blue"></ion-icon>
+        <ion-label>
+          <h2>Website</h2>
+          <p>http://www.tp.edu.sg/</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail()">
+        <ion-icon @slidelefttitle slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>enquiry@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item mode='md'>
+        <ion-icon @slidelefttitle slot="end" name="logo-facebook" style="color: #3b5998"></ion-icon>
+        <ion-label>
+          <h2>Facebook</h2>
+          <p>@temasekpoly</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openTwitter()">
+        <ion-icon @slidelefttitle slot="end" name="logo-twitter" style="color: #00acee"></ion-icon>
+        <ion-label>
+          <h2>Twitter</h2>
+          <p>@temasekpoly</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openInstagram()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@temasekpoly</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' [routerLink]="'/faq'">
+        <ion-icon @slidelefttitle slot="end" name="help" style="color: darkblue"></ion-icon>
+        <ion-label>
+          <h2>FAQ</h2>
+          <p>Frequently Asked Questions</p>
+        </ion-label>
+      </ion-item> -->
+
+    </ion-list>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-list lines="full">
+
+      <ion-list-header class="header" mode='md'><strong>School of Applied Science</strong></ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6780 5322</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail1()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>aschotline@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openASC()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@schoolofappliedscience</p>
+        </ion-label>
+      </ion-item> -->
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="full">
+
+      <ion-list-header class="header" mode='md'><strong>School of Business</strong></ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6788 5127</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail2()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>bushotline@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openBUS()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@tpbizschool</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="full">
+      <ion-list-header class="header" mode='md'><strong>School of Design</strong></ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6780 5133</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail3()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>deshotline@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openDES()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@temasekpoly.design</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="full">
+      <ion-list-header class="header" mode='md'><strong>School of Engineering</strong></ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6780 5144</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail4()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>enghotline@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openENG()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@tpengine</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="full">
+      <ion-list-header mode='md'><strong>School of Humanities & Social Science</strong>
+      </ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6780 6565</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail5()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>hsshotline@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openHSS()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@hss_sc</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="full">
+      <ion-list-header class="header" mode='md'><strong>School of Informatics & IT</strong></ion-list-header>
+      <ion-item mode='md'>
+        <ion-icon slot="end" name="call" style="color: green"></ion-icon>
+        <ion-label>
+          <h2>Contact Number</h2>
+          <p>+65 6780 5158</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button mode='md' (click)="openEmail6()">
+        <ion-icon slot="end" name="at" style="color: red"></ion-icon>
+        <ion-label>
+          <h2>Email</h2>
+          <p>iit@tp.edu.sg</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- <ion-item mode='md' (click)="openIIT()">
+        <ion-icon @slidelefttitle slot="end" name="logo-instagram" style="color: #E1306C"></ion-icon>
+        <ion-label>
+          <h2>Instagram</h2>
+          <p>@tpiit</p>
+        </ion-label>
+      </ion-item> -->
+    </ion-list>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="faq" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Fun Fact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="top">
+    {{ info.question }}
+</div>
+
+
+  <ion-card  @fadein>
+
+    <ion-card-content>
+      <!-- <ion-card-subtitle>answers:</ion-card-subtitle> -->
+
+      {{ info.funfact }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

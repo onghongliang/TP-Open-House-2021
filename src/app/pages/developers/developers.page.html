@@ -1,0 +1,91 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="main" text=""></ion-back-button>
+      </ion-buttons>
+      <ion-title>Developers</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <ion-card-header>
+      <div class="ion-text-center">
+        <ion-text>
+          <h3>
+            Did you know: This app was developed by 6 students from the School of Informatics & IT!
+          </h3>
+        </ion-text>
+      </div>
+    </ion-card-header>
+
+
+    <!-- <p style="text-align: center; padding-top: 10px;">
+    
+  </p> -->
+
+    <!-- FAKE Content -->
+    <div *ngIf="!data">
+      <ion-list lines='full' *ngFor="let fake of ['1','2','3','4','5']">
+        <ion-item>
+          <ion-avatar slot="start" style="width: 70px; height: 70px; margin-bottom: 1em;">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </ion-avatar>
+          <ion-label style="margin-bottom: 1em;">
+            <h3>
+              <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+            </h3>
+            <p>
+              <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+            </p>
+            <p>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-list>
+      <ion-item *ngFor="let item of dev; index as i" lines="none" [ngClass]="{'even' : (i % 2) != 0, 'odd' : (i % 2) == 0}"> 
+        <ion-avatar id="face" item-start>
+          <img class="face" [src]="item.img">
+        </ion-avatar>
+        <ion-label class="us">
+          <h4 style="margin-bottom: 0;">{{item.name}}</h4>
+          <p style="margin: 0;">{{item.pos}}</p>
+          <p style="margin: 0;">{{item.course}}</p>
+        </ion-label>
+
+      </ion-item>
+
+      <!-- <div button class="we" *ngFor="let item of dev" (click)="presentModal(item)">
+      <ion-avatar item-start style="width: 80px; height: 80px;" >
+        <img class="face" [src]="item.img">
+      </ion-avatar>
+      <ion-label class="us">
+        <h2>{{item.name}}</h2>
+        <p>{{item.pos}}</p>
+        <p>{{item.course}}</p>
+      </ion-label>
+    </div> -->
+    </ion-list>
+
+    <p class="ion-padding" style="margin: 0; padding-bottom: 0;">Find out more about:</p>
+
+    <ion-card id="fbi" routerLink="/c-details/informatics05">
+      <div>
+        <ion-card-subtitle>Diploma in</ion-card-subtitle>
+        <ion-card-title>Financial Business Informatics</ion-card-title>
+      </div>
+    </ion-card>
+
+    <ion-card id="it" routerLink="/c-details/informatics07">
+      <div>
+        <ion-card-subtitle>Diploma in</ion-card-subtitle>
+        <ion-card-title>Information Technology</ion-card-title>
+      </div>
+    </ion-card>
+
+
+  </ion-content>

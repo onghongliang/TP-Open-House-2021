@@ -1,0 +1,37 @@
+#circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+  }
+
+  #card-list {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+#name {
+  width:70%;
+  margin-left: 1em;
+  // background-color: bisque;
+  margin-top: 1.7em;
+}
+
+ion-card-content {
+  display: flex;
+}
+
+ion-icon {
+  z-index: 2;
+  // background-color: aqua;
+  margin-top: 1.4em;
+}
+
+h3, h4 {
+  color: black;
+  margin: 0;
+}

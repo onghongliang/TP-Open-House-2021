@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Did You Know...</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-searchbar animated cancelButtonText="Cancel" showCancelButton="focus" placeholder="E.g Where is Temasek Poly?" 
+  showcancelbutton="" (ionInput)="getItems($event)">
+</ion-searchbar>
+<ion-list lines="full">
+  <ion-item detail *ngFor="let item of coursesList" routerLink="/faqdetails/{{item.key}}">
+    <ion-label class="ion-text-wrap">
+      {{item.question}}
+    </ion-label>
+  </ion-item> 
+</ion-list>
+</ion-content>
+<!-- (click)="onGoToNextPage(item)" -->

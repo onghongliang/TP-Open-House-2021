@@ -1,0 +1,115 @@
+ion-slide {
+  height: 100%;
+  display: block;
+}
+
+ion-content {
+  --background: wheat;
+}
+
+#score {
+  width: 50px;
+  text-align: center;
+}
+
+.pos-style-0 {
+  h4 {
+    color: snow;
+  }
+}
+
+.pos-style-1 {
+  h4 {
+    color: azure;
+  }
+}
+
+.pos-style-2 {
+  h4 {
+    color: azure;
+  }
+}
+
+.card-bg-0 {
+  color: snow;
+  background: linear-gradient(to right, #B78628, #C69320, #DBA514, #EEB609, #FCC201);
+  --background: linear-gradient(to right, #B78628, #C69320, #DBA514, #EEB609, #FCC201);
+
+  div {
+    color: snow;
+  }
+}
+
+
+
+.card-bg-1 {
+  color: black;
+  background: linear-gradient(to right, #B6B6BB, #CCCCCC, #D8D8D8, #E8E8E8, #D3D3D9);
+  --background: linear-gradient(to right, #B6B6BB, #CCCCCC, #D8D8D8, #E8E8E8, #D3D3D9);
+
+  div {
+    color: black;
+  }
+
+}
+
+#pos {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  z-index: 4;
+}
+
+.card-bg-2 {
+  color: white;
+  background: linear-gradient(to right, #762d16, #ae4e1f, #ca6b36, #e8a25e);
+  --background: linear-gradient(to right, #762d16, #ae4e1f, #ca6b36, #e8a25e);
+
+  div {
+    color: white;
+  }
+
+}
+
+.border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.winning {
+  width: 40px;
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  z-index: 9;
+}
+
+.guest {
+  margin-bottom: 40px;
+  color: grey;
+  background-color: palegoldenrod;
+  h3 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+h3 {
+  margin: 2em 0 0 0;
+}
+
+#ttPlayers {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+ion-avatar {
+  margin: auto;
+}
+
+ion-item {
+  padding-left: 30px;
+}

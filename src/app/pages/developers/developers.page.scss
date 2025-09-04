@@ -1,0 +1,115 @@
+
+ion-card-header {
+    background-color: peachpuff;
+    color: indianred;
+}
+
+.even {
+    --background: peachpuff;
+    color: indianred;
+}
+
+.odd {
+    --background: beige;
+    color: steelblue;
+}
+
+ion-list {
+    padding: 0px;
+}
+
+
+.us {
+    padding-left: 5px !important;
+}
+
+#face {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+
+ion-card {
+    height: 10em;
+    display: block;
+    padding: 3em 1em 1em;
+    position: relative;
+    // justify-content: center; /* align horizontal */
+    // align-items: center; /* align vertical */
+    margin: 1em; // top bottom, left right
+
+    div {
+        bottom: 8px !important;
+        position: absolute;
+
+        ion-card-title {
+            text-align: left;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 0 0.5em 0 0;
+            // font-family: Arial, Helvetica, sans-serif;
+            // color: white;
+        }
+
+        ion-card-subtitle {
+            color: black;
+            z-index: 1;
+            align-items: center;
+            /* align vertical */
+            margin: 0;
+        }
+
+    }
+
+}
+
+#iit {
+    background: url('https://www.tp.edu.sg/content/dam/tp-web/images/schools---courses/for-prospective-students/all-academic-schools/school-of-informatics---it/information-technology/IIT-t30-tn.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: 0em 0em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, #0087C9 100%);
+        opacity: .8;
+    }
+}
+
+#fbi {
+    background: url('https://www.tp.edu.sg/content/dam/tp-web/images/schools---courses/for-prospective-students/all-academic-schools/school-of-informatics---it/financial-business-informatics/IIT-t17-tn.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: 0em 0em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, #0087C9 100%);
+        opacity: .8;
+    }
+}
+
+#it {
+    background: url('https://www.tp.edu.sg/content/dam/tp-web/images/schools---courses/for-prospective-students/all-academic-schools/school-of-informatics---it/information-technology/IIT-t30-tn.jpg') center center no-repeat;
+    background-size: cover;
+    background-position: 0em 0em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 25%, #0087C9 100%);
+        opacity: .8;
+    }
+}

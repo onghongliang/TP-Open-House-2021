@@ -1,0 +1,133 @@
+.stick {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 1 !important;
+    display: flex;
+
+    
+    .date {
+        width: 40%;
+    }
+    
+    .school {
+        width: 60%;
+    }
+}
+
+.list {
+    height: auto;
+    // border-bottom: 0.5px solid rgb(0,0,0,0.5);
+    // padding-bottom: 0.5em;
+    // padding-top: 0.5em;
+    display: flex;
+
+    .list-item {
+        --inner-padding-end: 0px;
+        --padding-start: 0px;
+    }
+
+    .left {
+        min-width: 24% !important;
+        max-width: 24% !important;
+        display: flex;
+        justify-content: center;
+        /* align horizontal */
+        align-items: center;
+        /* align vertical */
+    }
+
+    .right {
+        text-align: justify;
+        // width: 80%;
+        // display: flex;
+        // justify-content: center; /* align horizontal */
+        align-items: center;
+        /* align vertical */
+        padding-right: 0.5em;
+    }
+}
+
+.splash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.5)
+}
+
+ion-item-option {
+    display: inline;
+}
+
+.ios {
+    ion-badge {
+        // Notifications Badge
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        z-index: 1;
+    }
+}
+
+.md {
+    ion-badge {
+        // Notifications Badge
+        position: absolute;
+        right: -4px;
+        top: 0px;
+        z-index: 1;
+    }
+}
+
+ion-content {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+
+h3 {
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p {
+    margin: 0;
+}
+
+#logo-fb {
+    color: #4267B2;
+    position: relative;
+    left: 3px;
+    top: 3px;
+}
+
+#logo-youtube {
+    color: #FF0000;
+    position: relative;
+    top: 3px;
+}
+
+#logo-teams {
+    position: relative;
+    top: 6px;
+}
+
+// ion-segment-button ion-label {
+//     font-size: 15px;
+//     color: white;
+// }
+
+.blue{
+    color: blue;
+}
+
+#more-info {
+    float: right;
+}

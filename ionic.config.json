@@ -1,0 +1,7 @@
+{
+  "name": "tpoh2021",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="ccalist" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ccaType}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="full">
+    <ion-item-group>
+      <ion-item *ngFor="let item of cca" routerLink="/detailscca/{{item.key}}" detail>{{item.name}}</ion-item>
+    </ion-item-group>
+  </ion-list>
+  
+  <!-- <div style="max-width: 600px; margin-left: auto;margin-right: auto;display: block;">
+
+    <div class="wrapper">
+      <div *ngFor="let cca of cca" routerLink="/detailscca/{{cca.key}}">
+        <img [src]='cca.cover' style="min-width: 100%; 
+        height: auto;">
+      </div>
+    </div>
+
+  </div> -->
+
+</ion-content>

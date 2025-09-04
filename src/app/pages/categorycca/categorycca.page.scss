@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+// IF the browser DOES support the CSS Grid Layout specification
+// then the following rules are applied instead
+
+.wrapper {
+  display: grid;
+
+  // Define a 10 pixel gap between each grid track
+  grid-gap: 0px !important, 0px !important;
+ 
+  // background-color: red;
+  // Define a rule, that will be repeated for each grid column, where
+  // the grid track is set to a minimum width of 300 pixels and a maximum
+  // width of the available space within the grid container (via the fr or
+  // fraction unit)
+
+  // The auto-fill value allows as many grid tracks to be fitted into the
+  // width of the grid container as possible
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+  // Specify the height of the row - minimum value of 50 pixels and a maximum
+  // value set to auto
+  grid-auto-rows: minmax(150px, auto);
+
+}
+

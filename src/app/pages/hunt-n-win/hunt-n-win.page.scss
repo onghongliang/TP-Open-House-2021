@@ -1,0 +1,49 @@
+#map {
+    height: 100%;
+    // width: 120%;
+    // transform: rotate(-31deg);
+}
+
+ion-toolbar {
+    --background: transparent;
+    position: absolute;
+}
+ion-icon {
+    color: #879cb1;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    background-color: #1D2C4D;
+}
+.drawer-content {
+    margin-top: 35px;
+    // overflow-y: scroll !important;
+    touch-action: auto !important;
+    color: rgb(135, 156, 177);
+    padding: 0 10px 10px 10px;
+    height: 1000px;
+}
+.bottom-drawer-content {
+    h3 {
+        margin: auto;
+        padding-bottom: 25px;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+ion-icon {
+    font-size: 30px;
+}
+
+.ani {
+    display: none;
+    width: 100%;
+    bottom: 5em;
+    position: absolute;
+    z-index: 999;
+}

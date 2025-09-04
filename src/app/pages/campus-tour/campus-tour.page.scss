@@ -1,0 +1,72 @@
+iframe {
+  width: 100%;
+  height: 250px;
+}
+.top-msg {
+  background-color: olivedrab;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ion-toolbar {
+  --background: bisque;
+
+  ion-buttons ion-back-button {
+    color: yellowgreen;
+  }
+  ion-title {
+    color: slategray;
+  }
+}
+
+
+// ion-toolbar {
+//   --background: saddlebrown;
+//   // --background: url("https://firebasestorage.googleapis.com/v0/b/tp-open-house-2021.appspot.com/o/minecraftBackground.jpg?alt=media&token=d4785795-149a-4038-b5d4-935e3a71da4b");
+
+//   ion-buttons ion-back-button {
+//     color: yellowgreen;
+//   }
+//   ion-title {
+//     color: white;
+//   }
+// }
+
+ion-content {
+  --background: linear-gradient(#ffffff, #b69fb6, #6B5428, #76552b, #402905 );
+}
+
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    // position: absolute;
+    // top: 37%;
+    // font-size: 2.0em;
+    // width: 90%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+}
+
+#bee {
+  width: 50px;
+  position: absolute;
+  bottom: 5px;
+}
+
+#goat {
+  width: 50px;
+  position: absolute;
+  bottom: -10px;
+  right: 20px
+}
+
+.list-video {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}

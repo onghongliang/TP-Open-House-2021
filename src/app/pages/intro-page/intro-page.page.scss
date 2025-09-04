@@ -1,0 +1,100 @@
+p{
+    color: white;
+}
+
+// .googleLoginBtn{
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     padding: 10px;
+//     text-align: center;
+// }
+
+.welcome {
+    
+    padding: 50px 10px 10px 10px;
+
+    h4 {
+        color: white;
+        background-color: red;
+        // background-color: red;
+    }
+}
+
+ion-button {
+    width: 100%;
+    text-transform: none;
+    font-family: monospace;
+    color: #ba2929;
+    height: 48px;
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+
+   h4 {
+    font-weight: bolder;
+    margin-left: 5px;
+    font-size: 30px;
+    font-family: monospace;
+    color: white;
+}
+ion-icon{
+    color: #ba2929;
+    width: 10%;
+}
+ion-content {
+    --background: none;
+    background: url('../../../assets/bg/sand-bg.png');
+    background-size: cover;
+    background-position: center center;
+  }
+
+
+
+.img {
+    background-color: white;
+    color: red;
+    padding: 5px;
+    display: table;
+    text-align: center;
+    margin: 15em auto auto auto;
+    border-radius: 10px;
+    img {
+        height: 150px;
+        border-radius: 20px;
+    }
+
+    p {
+        color: red;
+    }
+}
+
+
+.heading{
+    margin-left: 5px; 
+    font-family: monospace; 
+    font-size: 18px; 
+    font-weight: lighter;
+}
+#or {
+    text-align: center;
+    padding: 5px 0 5px 0;
+    margin: 0;
+}
+
+.button-navs {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.btnWrap {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+ion-button {
+    height: 48px !important;
+    margin: 5px 0 10px 0;
+    
+}

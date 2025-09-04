@@ -1,0 +1,71 @@
+<ion-header *ngIf="bg_image" parallax imageUrl="{{bg_image}}" maximumHeight="250" expandedColor="{{setColor}}" titleColor="white">
+ 
+  <ion-toolbar style="--background: {{setColor}}">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="courses" text=""></ion-back-button> <!-- defaultHref="home"-->
+    </ion-buttons>
+    <ion-title>
+      School of {{ category }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+
+  <div *ngIf="!data">
+    <ion-card>
+      <h3 class="ion-padding">
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+      </h3>
+      <ion-thumbnail>
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+    </ion-card>
+    <ion-card>
+      <div class="ion-padding" *ngFor="let val of ['one', 'two', 'three', 'four']">
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </div>
+    </ion-card>
+  </div>
+
+  <div *ngFor="let sch of schoolinfo">
+    <ion-card id="info" style="color: black;" >
+      <ion-card-content id="txt-desc">{{ sch.desc1 }}
+        <!-- one -->
+      </ion-card-content>
+      <ion-card-content id="txt-desc">{{ sch.desc2 }}
+        <!-- two -->
+      </ion-card-content>
+      <ion-card-content *ngIf="sch.desc3" id="txt-desc">{{ sch.desc3 }}
+        <!-- three -->
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- List Course Header -->
+    <div class="stick">
+      <h4 class="ion-padding"><strong>Full-Time Courses</strong></h4>
+    </div>
+  
+    <!-- List Course -->
+    <ion-card id="card-list" routerLink="/c-details/{{info.key}}" *ngFor="let info of courses">
+      <ion-card-content>
+        <div [style.backgroundColor]="colorCode" id="circle">
+          <h4 style="color: rgb(255, 255, 255);" [style.color]="txtColor"><b>{{ info.code }}</b></h4>
+        </div>
+        <h5 id="name">{{ info.name }}</h5>
+        <ion-icon style="opacity: 0.5" size="small" name="arrow-forward" end></ion-icon>
+      </ion-card-content>
+    </ion-card>
+  
+
+  </div>
+
+
+  </ion-content>

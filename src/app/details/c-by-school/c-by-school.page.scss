@@ -1,0 +1,109 @@
+// Updated
+
+ion-thumbnail { // For fake content
+    width: 100%;
+    height: 11em;
+}
+
+#card-list {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+#circle {
+    width: 70px;
+    height: 70px;
+    // background: rgb(50,205,50, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+  }
+#name {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    font-weight: bolder;
+    margin: auto;
+}
+ion-card-content {
+    display: flex;
+
+    h5 {
+        margin: auto;
+    }
+}
+#info {
+    border: 2px solid #ba2929;
+    border-radius: 15px;
+}
+ion-item {
+    margin: 0 !important;
+    padding:0 !important;
+}
+ion-icon {
+    z-index: 2;
+    // background-color: aqua;
+    margin-top: 1.4em;
+}
+.bookmark {
+   
+    width: 100%;
+    height: 0.5em;
+    display: flex;
+
+}
+#b1 {
+
+    height: 0.5em;
+    width: 80%;
+}
+
+.middle {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+
+
+.ios {
+    #bookmark {
+
+        font-size: 40px;
+        top: -36px;
+        position: relative;
+    }
+}
+// android
+#bookmark {
+
+    font-size: 40px;
+    top: -50px;
+    position: relative;
+}
+
+.stick {
+    // position: -webkit-sticky !important;
+    // position: sticky !important;
+    top: 0px !important;
+    z-index: 1 !important;
+}
+#txt-desc {
+    text-align: justify;
+}
+
+h3, h4 {
+    color: black;
+    margin: 0;
+}
+
+
+
+ion-content {
+    -webkit-user-select: text;
+    user-select: text;
+}

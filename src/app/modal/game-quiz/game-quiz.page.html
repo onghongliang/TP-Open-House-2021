@@ -1,0 +1,77 @@
+<ion-content>
+
+
+  <ion-slides *ngIf="viewSlide == true" #slides (ionSlideDidChange)="slideChanged()">
+
+    <!-- for YES OR NO part -->
+
+    <ion-slide>
+
+      <ion-img src="../../../assets/imgs/p1.png"></ion-img>
+      <div style="margin-top: 8em;">
+        <h3 class="title">Explore this venue?</h3>
+        <!-- <ion-button (click)="accept()" style="height: 48px; width: 100px;"><b>YAS</b></ion-button>
+        <ion-button (click)="reject()" style="height: 48px; width: 100px;"><b>NAH</b></ion-button> -->
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-button (click)="accept()"
+              style="height: 48px; width: 100px; font-size: 18px; --background: rgb(97, 182, 97);"><b>YES</b>
+            </ion-button>
+          </ion-col>
+          <ion-col col-6>
+            <ion-button (click)="reject()" style="height: 48px; width: 100px; font-size: 18px;--background:indianred;">
+              <b>NO</b></ion-button>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+
+    <!-- loading page part -->
+    <ion-slide>
+      <div class="loading">
+        <div>
+          <img id="animate-walk" src="https://i.pinimg.com/originals/38/21/c2/3821c26c7510a99d67484e31d7ef6002.gif"
+            style="height: 100%;">
+          <h3 id="walking">  Walking...</h3>
+        </div>
+
+        <ion-card-content class="fun-content">
+          <h3 class="funfact">Did you know...</h3>
+
+          <h3 style="color: antiquewhite;">{{funfact.question}}</h3>
+          <h3 style="color: antiquewhite;">{{funfact.funfact}}</h3>
+        </ion-card-content>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="top-points">
+        <p class="points" style="color: white;"><b>Points:</b> {{points}}</p>
+      </div>
+      <div style="margin-top: 2em;">
+        <h2 style="font-size: 18px; padding-left: 20px; padding-right: 20px; color: white;"><b>{{question}}</b></h2>
+        <ion-list mode='ios' lines="full" class="list-background-color">
+          <ion-radio-group (ionChange)="radioGroupChange($event)" lines="full">
+            <ion-item mode='ios' lines="full" *ngFor="let i of questions" (ionSelect)="radioSelect($event)"
+              class="item-background-color">
+              <ion-icon name="trophy" style="color: gold;"></ion-icon>
+              <ion-label style="padding-left: 14px; color: white;">{{i.question}}</ion-label>
+              <ion-radio mode='ios' item-center value="{{i.question}}" disabled="{{i.disabled}}" style="color: white;">
+              </ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <div style="padding-top: 30px;">
+          <ion-button id="submit-btn" expand="full" (click)="submit()" [disabled]="!selected">Submit</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

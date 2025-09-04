@@ -1,0 +1,168 @@
+<ion-header class="ion-no-border">
+  <!-- DO NOT DISTURB COUNTDOWN BANNER-->
+  <ion-toolbar color="primary">
+    <ion-buttons (click)="goToProfilePage()" slot="start" >
+      <ion-button [disabled]="!user">
+        <ion-icon style="color: white;" slot="icon-only" name="person-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- [routerLink]="'/notification'" (click)="click()" -->
+    <ion-buttons slot="end" (click) = "goToNotificationPage()">
+      <ion-button >
+        <ion-icon style="color: white;" name="mail" size="large"></ion-icon>
+      </ion-button>
+       <ion-badge color="tertiary" *ngIf="noti">{{noti}}</ion-badge> 
+    </ion-buttons>
+    <ion-buttons slot = "end" [routerLink] = "'/leaderboard'">
+    <ion-button>
+      <ion-icon style="color: white;" slot="icon-only" name="trophy-sharp"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="guest" *ngIf="guest">
+    <h4>You are now in GUEST mode. Some features have been disabled. Please register or login to enjoy full access. <ion-chip color="secondary" (click)="setupPage()">Login</ion-chip></h4>
+  </div>
+
+  <div id="carousel">
+    <h4>Key Highlights</h4>
+    <img class="middle" *ngIf="!data" src="../assets/gif/tp.gif">
+    <!-- CAROUSEL -->
+    <ion-slides pager="true" [options]="slideOptsOne" class="main-caro">
+      <ion-slide *ngFor="let item of caro" class="slide">
+        <!-- <ion-card class="caro-card" (click)="launch(item.link)"></ion-card> -->
+        <ion-card class="caro-card" (click)="launch(item)">
+          <img id="img-caro" [src]='item.img' />
+          <h5 style="text-align: center;" *ngIf="item.title" class="slide-text">{{item.title}}</h5>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+
+  <div class="class-bg" style="border-radius: 30px 30px 0 0 !important;">
+    <div id="trapezoid1">
+      <h5>What's Happening?</h5>
+    </div>
+
+    <ion-row>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/schedule'">
+          <ion-icon id="iconSchedule" name="calendar"></ion-icon>
+          <ion-card-header><b>Schedule</b></ion-card-header>
+          <ion-card-content>What's happening</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/courses'">
+          <ion-icon id="iconCourses" name="school"></ion-icon>
+          <ion-card-header><b>Courses</b></ion-card-header>
+          <ion-card-content>List of Courses</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/makan-time'" >
+          <ion-icon id="iconFood" name="restaurant"></ion-icon>
+          <ion-card-header><b>Makan Time!</b></ion-card-header>
+          <ion-card-content>Makan Time!</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+  </div>
+  <div class="class-bg">
+    <div id="trapezoid2">
+      <h5>Ready to Explore?</h5>
+    </div>
+
+    <ion-row>
+      <ion-col size="4" >
+        <!-- <img id="doneGame" src="../assets/imgs/gamedone.png">   (click)="gameAlert()"  disabled -->
+        <ion-card id="menuCard" (click)="goToHuntNWin()" [disabled]="!user"  >
+          <!-- -->
+          <ion-icon id="iconGame" name="game-controller"></ion-icon>
+          <ion-card-header style="margin: 0px -10px !important;"><b>Hunt & Win</b></ion-card-header>
+          <ion-card-content>Treasure Hunt</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/map'">
+          <ion-icon id="iconMap" name="map"></ion-icon>
+          <ion-card-header><b>Map</b></ion-card-header>
+          <ion-card-content>View our campus!</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4" >
+        <ion-card id="menuCard" [routerLink]="'/campus-tour'">
+          <ion-icon id="iconTour" name="logo-xbox"></ion-icon>
+          <ion-card-header><b>Minecraft Time!</b></ion-card-header>
+          <ion-card-content>Contact Info</ion-card-content>
+        </ion-card>
+      </ion-col>
+    
+    </ion-row>
+  </div>
+  <div class="class-bg">
+    <div id="trapezoid3">
+      <h5>Stay Connected!</h5>
+    </div>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/for-the-gram'">
+          <ion-icon id="iconSocial" name="logo-instagram"></ion-icon>
+          <ion-card-header style="margin: 0px -10px !important;"><b>For the 'Gram!</b></ion-card-header>
+          <ion-card-content>Connect with TP!</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="menuCard" [routerLink]="'/contact-us'">
+          <ion-icon id="iconContact" name="information-circle"></ion-icon>
+          <ion-card-header style="margin: 0px -10px !important;"><b>Contact Us</b></ion-card-header>
+          <ion-card-content>Join our Telegram Channel!</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/developers'">
+          <ion-icon id="iconDev" name="logo-snapchat"></ion-icon>
+          <ion-card-header><b>Developers</b></ion-card-header>
+          <ion-card-content>Meet our Developers!</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+  <div class="class-bg" style="padding-bottom: 4em;">
+    <div id="trapezoid2">
+      <h5>More Information</h5>
+    </div>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/gettin-there'">
+          <ion-icon id="iconDirections" name="compass"></ion-icon>
+          <ion-card-header style="margin: 0px -10px !important;"><b>Getting There</b></ion-card-header>
+          <ion-card-content>Getting to TP</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/poly-webinar'">
+          <!-- <ion-icon id="iconBol" name="people"></ion-icon> -->
+          <ion-icon id="iconBol" name="easel"></ion-icon>
+          <ion-card-header style="margin: 0px -10px !important;"><b>Polytechnic Webinar</b></ion-card-header>
+          <ion-card-content>Empty</ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card id="menuCard" [routerLink]="'/what-else'">
+          <ion-icon id="iconMore" name="apps"></ion-icon>
+          <ion-card-header id="tpohTitle"><b>What Else?</b></ion-card-header>
+          <ion-card-content>More About</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

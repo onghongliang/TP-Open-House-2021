@@ -1,0 +1,15 @@
+<ion-header >
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-button (click)="findMe()" shape="round" color="dark">
+      <ion-icon slot="start" name="locate"></ion-icon>
+      Where I Am
+    </ion-button> -->
+    <ion-title slot="end">Campus Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <div #mapElement id="map"></div>
+</ion-content>

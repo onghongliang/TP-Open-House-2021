@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div class="profile-pic">
+      <img src="../assets/fake_person.jpg" class="center" *ngIf="user.photoURL == null">
+      <img src="{{user.photoURL}}" class="center" *ngIf="user.photoURL != null">
+
+      <ion-icon (click)="uploadtype()" id="upload-pic" name="camera-outline"></ion-icon>
+
+    </div>
+
+    <!-- <ion-item>
+      <ion-label class="centerButton">
+        <ion-chip (click)="uploadtype()">Change Profile Image</ion-chip>
+      </ion-label>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>
+        {{user.displayName}}
+      </ion-label>
+      <ion-chip (click)="presentModal('username', null)">Change Username</ion-chip>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        {{user.email}}
+      </ion-label>
+      <ion-chip (click)="presentModal('email', null)">Change email</ion-chip>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        *******
+      </ion-label>
+      <ion-chip (click)="presentModal('password', null)">Change Password</ion-chip>
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="white-space: normal !important;">
+        {{fireData.user }}
+      </ion-label>
+      <ion-chip (click)="presentModal('user', fireData.user)">Change user type & school</ion-chip>
+    </ion-item>
+
+    <!-- <ion-item *ngIf="!(fireData.user == 'Parent' || fireData.user == 'Teacher / Lecturer')"> 
+      <ion-label>
+        {{fireData.school}}
+      </ion-label>
+      <ion-chip (click)="presentModal('school')">Change School</ion-chip>
+    </ion-item> -->
+
+  </div>
+
+
+
+
+  <div class="btnWrapper">
+    <ion-button (click)="signOut()" color="Secondary">
+      Sign out
+    </ion-button>
+    <ion-button (click)="presentAlert()" color="primary" style="color: #fff !important;">
+      Delete Account
+    </ion-button>
+  </div>
+</ion-content>

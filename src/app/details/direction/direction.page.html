@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Directions to TP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="center">
+    <ion-chip color="danger" (click)="presentActionSheet()">
+        <ion-icon name="pin"></ion-icon>
+      <ion-label>{{mode}}</ion-label>
+    </ion-chip>
+  </div>
+
+  <div #mapElement class="map"></div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="refreshPos()">
+    <ion-fab-button>
+      <ion-icon name="locate"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

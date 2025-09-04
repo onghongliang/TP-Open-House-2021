@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Courses</ion-title>
+    <ion-buttons routerLink="/c-search" slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons routerLink="/saved-courses" slot="end">
+      <ion-badge id="saved-badge" *ngIf="badge.length > 0" color="tertiary">{{badge.length}}</ion-badge>
+      <ion-button>
+        <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card button id="asc" (click)="openAsc()" class="card">
+    <div>
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Applied Science</ion-card-title>
+    </div>
+  </ion-card>
+
+  <ion-card button id="bus" (click)="openBus()" class="card">
+    <div>
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Business</ion-card-title>
+    </div>
+  </ion-card>
+
+  <ion-card button id="des" (click)="openDes()" class="card">
+    <div>
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Design</ion-card-title>
+    </div>
+  </ion-card>
+
+  <ion-card button id="eng" (click)="openEng()" class="card">
+    <div>
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Engineering</ion-card-title>
+    </div>
+  </ion-card>
+
+  <ion-card button id="hss" (click)="openHss()" class="card">
+    <div class="title">
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Humanities & Social Sciences</ion-card-title>
+    </div>
+  </ion-card>
+
+  <ion-card button id="iit" (click)="openIit()" class="card">
+    <div>
+      <ion-card-subtitle>School of</ion-card-subtitle>
+      <ion-card-title>Informatics & IT</ion-card-title>
+    </div>
+  </ion-card>
+
+  <!-- <ion-card routerLink="/courses/all" color="primary" class="card">
+    <ion-card-title>View All Courses</ion-card-title>
+  </ion-card> -->
+
+  <!-- <div style="display: flex;">
+    <p>Score: &nbsp;</p>
+    <br>
+    <p id="name" style="color: black;"></p>
+  </div> -->
+</ion-content>

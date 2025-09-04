@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="courses" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>All Courses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="new-background-color">
+    <ion-searchbar animated cancelButtonText="Cancel" showCancelButton="focus"
+      placeholder="Enter course code, name or description" showcancelbutton="Cancel" (ionInput)="getItems($event)">
+    </ion-searchbar>
+  </div>
+
+  <ion-card @fadein id="card-list" routerLink="/c-details/{{info.key}}" *ngFor="let info of coursesList">
+    <!-- <p>{{info.key}}</p> -->
+    <ion-card-content>
+      <div [style.backgroundColor]="info.color" id="circle">
+        <h5 [style.color]="info.colortxt">{{ info.code }}</h5>
+      </div>
+      <h5 id="name">{{ info.name }}</h5>
+      <ion-icon size="small" name="arrow-forward"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hunt & Win</ion-title>
+    <ion-buttons collapse="true" slot="end">
+      <ion-button>Points: {{points}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div #mapElement id="map"></div>
+  <!-- <img  class="ani" src="https://media0.giphy.com/media/8Ppw3rqOpHUeRcMcXO/source.gif"> -->
+</ion-content>
+
+<ion-bottom-drawer [(state)]="drawerState" [minimumHeight]="minimumHeight" [dockedHeight]="dockedHeight"
+  [shouldBounce]="shouldBounce" [distanceTop]="distanceTop" [disableDrag]="disableDrag">
+  <div style="text-align: center;">
+    <ion-icon name="reorder-two-outline"></ion-icon>
+  </div>
+  <div #scrollDiv class="drawer-content" >
+  
+    <div *ngIf="content" class="bottom-drawer-content">
+      <h3>{{content.title}}</h3>
+      <div [innerHTML]="content.content"></div>
+    </div>
+  </div>
+
+
+</ion-bottom-drawer>

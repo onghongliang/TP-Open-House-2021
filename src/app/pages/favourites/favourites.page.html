@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-buttons slot="start">
+    <ion-back-button defaultHref="main" text=""></ion-back-button>
+  </ion-buttons>
+    <ion-title>Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card id="card-list" routerLink="/c-details/{{info.coursekey}}" *ngFor="let info of courses">
+    <ion-card-content>
+      <div [style.backgroundColor]="info.color" id="circle">
+        <!-- <h4 style="color: rgb(255, 255, 255);" [style.color]="txtColor"><b>{{ info.code }}</b></h4> -->
+      </div>
+      <h5 id="name">{{ info.name }}</h5>
+      <ion-icon style="opacity: 0.5" size="small" name="arrow-forward" end></ion-icon>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>Your Journey Begins Here...</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+
+  <!-- LOGO -->
+  <div class="img">   
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKOqHCjcID7LxhdLHHPmkmoMIuWxCTqFmtmQ&usqp=CAU">
+  </div>
+
+
+  <!-- WELCOME -->
+  <div class="welcome">
+    <h4>Welcome</h4>
+    <p class="heading">Sign in to continue</p>
+  </div>
+
+
+  <!-- INPUT element -->
+
+  <form [formGroup]="login_form" (ngSubmit)="login(login_form.value)">
+    <ion-card style="margin-bottom: 20px;">
+      <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)">This field is required</div> -->
+      <ion-item lines="none">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="email" formControlName="email" placeholder="Enter your email"></ion-input>
+        <ion-icon *ngIf="email.invalid && (email.dirty || email.touched)" style="height: 25px;"
+          name="alert-circle-outline" color="danger"></ion-icon>
+      </ion-item>
+      <!-- <ion-chip *ngIf="email.invalid && (email.dirty || email.touched)" color="danger"> -->
+
+      <!-- <ion-label>Invalid Email</ion-label> -->
+      <!-- </ion-chip> -->
+    </ion-card>
+    <ion-card>
+      <ion-item lines="none">
+        <ion-icon name="lock-open-outline"></ion-icon>
+        <ion-input [type]="showPassword ? 'text' : 'password'" formControlName="password"
+          placeholder="Enter your password" type="password"></ion-input>
+        <ion-icon [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
+        <ion-icon *ngIf="password.invalid && (password.dirty || password.touched)" style="height: 25px;"
+          name="alert-circle-outline" color="danger"></ion-icon>
+      </ion-item>
+    </ion-card>
+
+
+    <!-- NO ACC LINK -->
+    <p style="text-align: center; padding-top: 10px;">Don't have an account? <ion-text color="light" [routerLink]="['']">
+        <b><u>Back to start</u></b></ion-text>
+    </p>
+
+
+    <!-- BUTTON LOGIN / GOOGLE PLUS -->
+    <div class="button-navs">
+      <ion-button type="submit" [disabled]="!login_form.valid" color="light" style="font-size: 16px;" expand="block">
+        Login
+      </ion-button>
+      <!-- <p id="or">Or login with</p>
+      <ion-button color="light" style="font-size: 16px;" expand="block" (click)="googlelogin()">
+        <ion-icon name="logo-google" slot="start"></ion-icon>
+        Google Login
+      </ion-button> -->
+    </div>
+
+
+  </form>
+</ion-content>

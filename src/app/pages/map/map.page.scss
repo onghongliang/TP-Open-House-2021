@@ -1,0 +1,17 @@
+#map {
+    height: 100%;
+}
+
+ion-toolbar {
+    position: absolute;
+    --background: transparent;
+
+    ion-title {
+        color: black;
+    }
+}
+
+ion-buttons {
+    border-radius: 50%;
+    background-color: red;
+}

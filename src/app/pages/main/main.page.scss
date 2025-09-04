@@ -1,0 +1,345 @@
+ion-header { // Header
+    // background: linear-gradient( red, rgb(255, 110, 110));
+
+    // ion-toolbar {
+    //     --background: transparent !important;
+    // }
+
+    ion-badge { // Notifications Badge
+        position: absolute;
+        right: 2.5px;
+        top: -5px;
+        z-index: 1;
+    }
+
+    .container { // Countdown Banner
+        color: white;
+        text-align: center;
+        z-index: 10 !important;
+        padding: 0em 0em 0.5em 0em;
+    
+        // .head {
+        //     font-weight: normal;
+        //     font-size: 10.72px !important;
+        //     margin: 8px 0px;
+        // }
+    
+        p, ul {
+            padding: 0px;
+            margin: 0px;
+        }
+    
+        li {
+            display: inline-block;
+            font-size: 10.72px; // h6
+            list-style-type: none;
+            padding: 0.5em;
+            text-transform: uppercase;
+            font-weight: bolder;
+            
+            span {
+                display: block;
+                font-size: 24px; // h2
+            }
+        }
+
+    }
+
+    .day1, .day2, .day3, .day4{ // Day Tracker Banner
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0em 0em 0.5em 0em;
+        align-items: center;
+        color: white;
+        height: 5em;
+
+        h3 {
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+}
+
+ion-slides {
+    --bullet-background: #FF6E6E;
+    padding: 0 0 1em;
+}
+
+#carousel { // Carousel for Key Highlights
+    background: white;
+    padding-top: 1em;
+    margin-top: 0;
+
+    > h4 {
+        margin: 0;
+        padding-left: 7px;
+    }
+
+    .middle {
+        width: 2.5em;
+        margin: 2em auto !important;
+        display: block;
+    }
+
+    .slide {
+        height: 100% !important;
+        width: 100%;
+        position: relative; 
+        display: inline-block;
+    }
+
+    .caro-card {
+        border-radius: 5px !important;
+        height: 100%;
+        margin: 0.5em 0.5em 1.5em !important;
+    }
+
+    #img-caro {
+        position: inherit; 
+        min-width: 100%; 
+        height: auto; 
+        display: block;
+    }
+
+    .slide-text {
+        position: absolute;
+        background-color: rgb(0,0,0, 0.4);
+        border-radius: 5px;
+        color: white;
+        text-align: left;
+        width: 100%;
+        left: 0;
+        bottom: 0 !important;
+        font-size: 14px;
+        padding:10px;
+        margin: 0px !important
+    }
+    
+}
+
+// #banner {
+//     align-items: center;
+//     display: flex;
+//     justify-content: center;
+//     background-color: red;
+//     padding-bottom: 16px;
+// }
+
+
+.class-bg { // Menu
+    background-color: rgb(255, 110, 110);
+    padding: 20px;
+
+    #trapezoid1, #trapezoid2, #trapezoid3 {
+        border-bottom: 40px solid white;
+        border-left: 27px solid transparent;
+        border-right: 27px solid transparent;
+        border-radius: 15px 15px 0 0;
+        height: 0px;
+        margin: auto;
+    }
+
+    #trapezoid1 {
+        width: 240px;
+    }
+
+    #trapezoid2 {
+        width: 220px;
+    }
+    
+    #trapezoid3 {
+        width: 210px;
+    }
+
+    h5 {
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        font-size: 18px;
+    }
+
+    ion-row {
+        margin: -5px -10px;
+        border-radius: 15px 15px 15px 15px; 
+        background-color: white;
+        padding: 10px 0 10px 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #doneGame {  // game complete picture
+        position: absolute;
+        width: 100px;
+        z-index: 2;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #menuCard { // Menu Items
+        padding: 10px !important;
+        text-align: center;
+    
+        margin: 0px !important;
+        color:black;
+        // background-color: coral ;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em !important;
+        box-shadow: none !important;
+        
+        ion-icon {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            border-radius: 50%;
+            text-align: center;
+            
+            // box-shadow: 10px 10px 20px #888888;
+            // border: 1px solid;
+        }
+        
+        ion-card-header {
+            margin: 0px !important;
+            padding: 0 !important;
+            color:black;
+        }
+
+        ion-card-content {
+            display: none;
+        }
+        
+        // Icon Colours
+        #iconSchedule {
+            background:rgb(242,146,0);
+            color: white;
+        }
+        #iconCourses {
+            background: #f9b800;
+            color: white;
+        }
+        #iconFood {
+            background: #ffdd00;
+            color: black;
+        }
+        
+        #iconGame {
+            background: rgba(17, 165, 37, 0.795);
+            color: white;
+        }
+        #iconMap {
+            background:  linear-gradient(#209c3580, #1DA1F2);
+            color: white;
+        }
+        #iconDirections {
+            background: rgb(38,52,140);
+            color: white;
+        }
+
+        #iconSocial {
+            background:
+            linear-gradient(225deg, rgba(131,58,180,1), rgba(193,53,132,1), rgba(225,48,108,1), rgba(245,96,64,1),
+            rgba(252,175,69,1), rgba(255,220,128,1));
+            color: white;
+        }
+        #iconContact{
+            background:  #0088cc;
+            color: white;
+        }
+        #iconDev{
+            background: #00bdf7;
+            color: white;
+        }
+
+        #iconTour {
+            // background: #46dbe6;
+            background: linear-gradient(to right, #4cb8c4, #3cd3ad);//#004500,	#609e60,#0db50d,#0f800f,#8fe38f
+            color: white;
+        }
+        #iconBol {
+            background: #54368c;
+            color: white;
+        }
+        #iconMore {
+            background: #82378c;
+            color: white;
+        }
+        
+    }
+    
+}
+
+.guest {
+    width: 100%;
+    background-color: #FF6E6E;
+    padding: 20px;
+    color: ghostwhite;
+    border-radius: 0 0 20px 20px;
+    h4 {
+        margin:0;
+        padding:0;
+
+        ion-chip {
+            color: ghostwhite;
+        }
+    }
+
+
+}
+
+// #circle {
+//     background: rgb(255,0,0, 0.7);
+//     border-radius: 50%;
+//     position: relative;
+//     display: inline-block;
+//     padding: 10px;
+
+//     width: 40px;
+//     height: 40px;
+
+//     -moz-border-radius:50%;
+//     -webkit-border-radius:50%;
+//     border-radius: 50%;
+
+//    /* border: 1px solid #ebebeb;*/
+//     text-align: center;
+//     margin: auto;
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     font-size: 50px;
+//     color: #fff;
+//     line-height: 500px;
+//     text-align: center;
+//     background: red;
+//     justify-content: center;
+//     align-items: center;
+//     padding:10px;
+
+// }
+
+// #circle h6 {
+//     margin: auto;
+//     font-size: 24px;
+//     color: white;
+//     // padding: 10px;
+//     text-align: center;
+//     padding-top: 8px;
+// }
+
+// #tpohIcon {
+//     width: 50px;
+//     height: 50px;
+//     margin: auto auto 5px auto;
+//     display: block;
+// }
+
+// #tpohTitle {
+//     padding-top: 21px;
+// }

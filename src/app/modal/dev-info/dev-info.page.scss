@@ -1,0 +1,25 @@
+div {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    -webkit-user-select: text;
+    user-select: text;
+    
+}
+
+img {
+    width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    z-index: 20;
+
+}
+ion-buttons {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 20px;
+    
+}
+ion-icon {
+    color:black;
+}

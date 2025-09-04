@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+    <ion-title>CCAs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+
+    <ion-card id="arts" (click)="openArts()">
+      <div>
+        <ion-card-subtitle>Temasek Arts Centre</ion-card-subtitle>
+        <ion-card-title>Performing Arts</ion-card-title>
+      </div>
+    </ion-card>
+
+    <ion-card id="sports" (click)="openSports()">
+      <div>
+        <ion-card-title>Sports</ion-card-title>
+      </div>
+    </ion-card>
+
+    <ion-card id="clubs" (click)="openClubs()">
+      <div>
+        <ion-card-title>P10 Clubs</ion-card-title>
+      </div>
+    </ion-card>
+
+    <ion-card id="interests" (click)="openInterests()">
+      <div>
+        <ion-card-title>Interest Groups</ion-card-title>
+      </div>
+    </ion-card>
+
+    <!-- <div style="max-width: 900px !important;">
+
+      <ion-card style="border-radius: 5px !important; height: 15em;" (click)="openArts()">
+        <ion-img style="position: inherit; min-height: 100%; width: 450px; opacity: 0.5;"
+          src="https://www.tp.edu.sg/staticfiles/TP/Student%20Life/arts_and_culture.jpg">
+        </ion-img>
+        <div style="align-items: center; display: flex; justify-content: center;">
+          <h3 class="title">Arts & Culture (Temasek Arts Centre)</h3>
+        </div>
+      </ion-card>
+
+      <ion-card style="border-radius: 5px !important; height: 15em;" (click)="openSports()">
+        <ion-img style="position: inherit; min-height: 100%; width: auto; opacity: 0.5;"
+          src="https://www.tp.edu.sg/staticfiles/TP/Student%20Life/sports.jpg">
+        </ion-img>
+        <div style="align-items: center; display: flex; justify-content: center;">
+          <h3 class="title">Sports</h3>
+        </div>
+      </ion-card>
+
+      <ion-card style="border-radius: 5px !important; height: 15em;" (click)="openCommunity()">
+        <ion-img style="position: inherit; min-height: 100%; width: auto; opacity: 0.5; "
+          src="https://www.tp.edu.sg/staticfiles/TP/Student%20Life/community_service.jpg">
+        </ion-img>
+        <div style="align-items: center; display: flex; justify-content: center;">
+          <h3 class="title">Community Service & Leadership</h3>
+        </div>
+      </ion-card>
+
+      <ion-card style="border-radius: 5px !important; height: 15em;" (click)="openAdventure()">
+        <ion-img style="position: inherit; min-height: 100%; width: auto; opacity: 0.5;"
+          src="https://www.tp.edu.sg/staticfiles/TP/Student%20Life/adventure.jpg">
+        </ion-img>
+        <div style="align-items: center; display: flex; justify-content: center;">
+          <h3 class="title">Adventure</h3>
+        </div>
+      </ion-card>
+
+    </div> -->
+  </div>
+</ion-content>

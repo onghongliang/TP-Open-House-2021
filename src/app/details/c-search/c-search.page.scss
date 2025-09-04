@@ -1,0 +1,76 @@
+.ios { // iOS Searchbar
+    // ion-searchbar.ng-tns-c5-2.sc-ion-searchbar-ios-h.sc-ion-searchbar-ios-s.hydrated.ios.searchbar-animated,
+    // ion-searchbar.ng-tns-c1-0.sc-ion-searchbar-ios-h.sc-ion-searchbar-ios-s.hydrated.ios.searchbar-animated
+    // {
+    //     padding: 1em !important;
+    // }
+    // .toolbar-searchbar { // Works
+    //     padding: 1em !important;
+    // }
+
+    ion-searchbar {
+        padding: 0 1em;
+    }
+}
+
+// div for searchbar
+.new-background-color {
+    background: white;
+    --border-style: none;
+    margin: 0;
+    padding: 0 !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 1 !important;
+}
+
+
+// ion-card
+#card-list {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    
+    ion-card-content {
+        display: flex;
+
+        #circle { // Course code
+            width: 50px;
+            height: 50px;
+            background: rgb(255,0,0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center; /* align vertical */
+            padding-top: 0.2em;
+            
+            > h5 { // Text for course code
+                color: white;
+                margin: auto;
+            }
+
+        }
+        
+        #name { // Course name
+            width: 70%;
+            display: flex;
+            align-items: center;
+            padding: 0 1em;
+            margin: auto;
+            font-weight: bolder;
+        }
+
+        ion-icon { // Arrow-forward icon
+            padding-top: 0.9em;
+            opacity: 0.5;
+            // display: flex;
+            // align-items: center;
+        }
+    }
+
+}
+
+h6 {
+    margin-bottom: 0;
+}

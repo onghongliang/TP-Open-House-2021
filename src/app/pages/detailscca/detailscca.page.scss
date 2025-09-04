@@ -1,0 +1,36 @@
+.middle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 2em;
+}
+.border {
+  margin-top: 1em;
+  border-style: solid;
+  border-color: rgb(255,0,0, 0.5);
+  padding: 0.3em;
+}
+#booth {
+  text-align: center;
+}
+
+.title{
+  color: black; 
+  font-weight: bold; 
+  font-size: 24px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.desc{
+  color: black;
+  margin-top: 1em;
+  padding: 0.3em;
+  border: 2px solid #ba2929;
+  border-radius: 15px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+

@@ -1,0 +1,114 @@
+// .title {
+//     width: 80%;
+//     position: absolute;
+//     z-index: 99;
+//     background-color: black;
+//     opacity: 0.7;
+//     top: 35%;
+//     text-align: center;
+//     color: white;
+//     padding: 5px;
+// }
+
+// .content {
+//     align-items: center;
+//     display: flex;
+//     justify-content: center;
+// }
+
+ion-card {
+  height: 12em;
+  display: block;
+  padding: 3em 1em 1em;
+  position: relative;
+  // color: black;
+
+  > div {
+      bottom: 8px !important;
+      position: absolute;
+
+      ion-card-title {
+          font-size: 20px;
+          text-align: left;
+          font-weight: bold;
+      }
+      
+      ion-card-subtitle {
+          color: black;
+          z-index: 1;
+          align-items: center; /* align vertical */
+          margin: 0;
+      }
+  }
+
+}
+
+
+// Method obtained from https://dev.to/hybrid_alex/background-image-gradient-overlay-534f
+#arts {
+  background: url('../../../assets/imgs/ccaArts.png') center center no-repeat;
+  background-size: cover;
+  background-position: 0em -1em; // leftright topbottom
+
+  &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgb(255, 110, 110) 100%);
+    opacity: .8;
+  }
+}
+
+#sports {
+  background: url('../../../assets/imgs/ccaSports.png') center center no-repeat;
+  background-size: cover;
+  background-position: 0em -2em;
+
+  &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgb(255, 110, 110) 100%);
+    opacity: .8;
+  }
+}
+
+#clubs {
+  background: url('../../../assets/imgs/p10_clubs.jpg') center center no-repeat;
+  background-size: cover;
+  background-position: 0em -1em;
+
+  &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgb(255, 110, 110) 100%);
+    opacity: .8;
+  }
+}
+
+#interests {
+  background: url('../../../assets/imgs/interest_groups.jpg') center center no-repeat;
+  background-size: cover;
+  background-position: 0em -1em;
+
+  &:before {
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(255,255,255,1) 25%, rgb(255, 110, 110) 100%);
+    opacity: .8;
+  }
+}

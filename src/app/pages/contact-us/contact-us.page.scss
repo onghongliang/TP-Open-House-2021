@@ -1,0 +1,44 @@
+.ios {
+    ion-list ion-list-header {
+        margin-top: 10px;
+    }
+}
+ion-list {
+
+    padding-bottom: 0px;
+
+    ion-list-header {
+        font-size: 24px;
+        padding-right: 1em;
+    }
+}
+.new-background-color{
+    --background: white;
+    --border-style: none;
+    --padding-start: 0 !important;
+    --padding-end: 0 !important;
+    --padding-top: 0 !important;
+    --padding-bottom: 0 !important;
+}
+
+// For campus operating hours
+ion-label {
+    font-style: normal !important;
+    color: black;
+
+    ion-row, ion-col {
+        padding: 0;
+    }
+}
+ion-content {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+h2{
+    margin: 0px;
+}
+
+p{
+    margin: 0px;
+}

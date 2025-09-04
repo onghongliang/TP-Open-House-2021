@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{info.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-card> -->
+    <ion-img [src]='info.image'></ion-img>
+    <!-- <img class="middle" *ngIf="!loaded" style="width: 2.5em;" src="../assets/gif/tp.gif"> -->
+    <!-- <ion-card-content> -->
+      <h3 padding class="title">{{info.name}}</h3> 
+      <div style="padding-left: 20px; padding-right: 20px;">
+      <div class="desc">
+      <p style="text-align: justify;">{{ info.desc }}</p>
+      <p style="margin-bottom: 0px; font-weight: bold;">Training Sessions</p>
+      <p style="margin-bottom: 0px;">{{info.trgdays}}</p>
+      <p>{{info.trgdays2}}</p>
+    </div>
+  </div>
+      <div *ngIf="info.desc">
+        <br>
+      </div>
+      <!-- <p id="booth" class="animated pulse infinite"><b >Call the SDAA hotline at 6780 5656 to find out more!</b></p> -->
+       <!-- <div class="border">
+        <p>Training: <b>{{info.trgdays}}</b></p>
+        <p>Training: <b>{{info.trgdays2}}</b></p>
+        <p>Contact: <b>{{info.email}}</b></p>
+        <p>CCA Type: <b>{{info.type}}</b></p>
+      </div> -->
+      <!-- <div class="button" style="width: 100%; margin-top: 1em; margin-bottom: 1em;">    
+        <ion-button (click)="openWithInAppBrowser(info.link)" fill="outline" slot="end">More details!</ion-button>
+    </div> -->
+    <!-- </ion-card-content>
+  </ion-card> -->
+</ion-content>

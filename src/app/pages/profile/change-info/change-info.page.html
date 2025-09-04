@@ -1,0 +1,145 @@
+<ion-content>
+
+  <h3 *ngIf="view === 'username'">Change Username</h3>
+
+  <h3 *ngIf="view === 'email'">Change Email</h3>
+
+  <h3 *ngIf="view === 'password'">Change Password</h3>
+
+  <h3 *ngIf="view === 'user'">Change User Type</h3>
+
+  <h3 *ngIf="view === 'school'">Change School</h3>
+
+
+  <div *ngIf="view === 'username'">
+    <form [formGroup]="usernameGrp" (ngSubmit)="updateUsername(usernameGrp.value)">
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input formControlName="username" type="text" maxlength="12" placeholder="Enter new Username"></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="full" [disabled]="!usernameGrp.valid">
+        Update Username
+      </ion-button>
+    </form>
+  </div>
+
+  <div *ngIf="view === 'email'">
+    <form [formGroup]="emailGrp" (ngSubmit)="presentAlert('email' ,emailGrp.value)">
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input formControlName="email" type="email" placeholder="Enter new Email"></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="full" [disabled]="!emailGrp.valid">
+        Update Email
+      </ion-button>
+    </form>
+  </div>
+
+
+  <div *ngIf="view === 'password'">
+    <form [formGroup]="passwordGrp" (ngSubmit)="confirmpass(passwordGrp.value)">
+      <!-- Password -->
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input formControlName="password" type="password" placeholder="Enter new Password"></ion-input>
+      </ion-item>
+
+      <!-- Confrim Password -->
+      <ion-item>
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input formControlName="confirmPassword" type="password" placeholder="Enter new Confirm Password">
+        </ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="full" [disabled]="!passwordGrp.valid">
+        Update Password
+      </ion-button>
+    </form>
+  </div>
+
+
+  <div *ngIf="view === 'user'">
+    <ion-card>
+      <ion-item>
+        <ion-label >I am a </ion-label>
+        <ion-select mode="ios" [(ngModel)]="place" (ngModelChange)="optionsFn()" id="selection" text-wrap
+          [interfaceOptions]="customPopoverOptions" interface="popover">
+          <ion-select-option value="Teacher / Lecturer">Teacher / Lecturer</ion-select-option>
+          <ion-select-option value="Parent">Parent</ion-select-option>
+          <ion-select-option value="Secondary Student (Graduating)">Secondary Student (Graduating)</ion-select-option>
+          <ion-select-option value="Secondary Student (Non-graduating)">Secondary Student (Non-graduating)
+          </ion-select-option>
+          <ion-select-option value="ITE (Higher Nitec) Student">ITE (Higher Nitec) Student</ion-select-option>
+          <ion-select-option value="ITE (Nitec) Student">ITE (Nitec) Student</ion-select-option>
+          <ion-select-option value="JC Student">JC Student</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+
+    <br>
+    <!-- ITE COLLEGE -->
+    <ion-card *ngIf="show === 'ite'">
+      <ion-item>
+        <ion-label>
+          ITE College
+        </ion-label>
+        <ion-select id="selection" mode="ios" [(ngModel)]="iteSchool" (ngModelChange)="iteFn()"
+          placeholder="Select School">
+          <ion-select-option value="ITE College Central">ITE College Central</ion-select-option>
+          <ion-select-option value="ITE College East">ITE College East</ion-select-option>
+          <ion-select-option value="ITE College West">ITE College West</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+
+    <!-- SECONDARY SCHOOL -->
+    <ion-card *ngIf="show === 'secondary'">
+      <ion-item>
+        <ion-label>
+          Secondary School
+        </ion-label>
+        <ion-select [interfaceOptions]="customAlert" id="selection" [(ngModel)]="secSchool" (ngModelChange)="secFn()"
+          mode="ios" placeholder="Select School">
+          <!-- list of sec school -->
+          <ion-select-option *ngFor="let i of sch" [value]="i.secschool">{{i.secschool}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+
+
+    <!-- JUNIOR COLLEGE -->
+    <ion-card *ngIf="show === 'jc'">
+      <ion-item>
+        <ion-label>
+          Junior College
+        </ion-label>
+        <ion-select id="selection" [(ngModel)]="juniorC" mode="ios" (ngModelChange)="jcFn()"
+          placeholder="junior college...">
+          <!-- list of JC -->
+          <ion-select-option value="Anderson Serangoon Junior College">Anderson Serangoon Junior College</ion-select-option>
+          <ion-select-option value="Anglo-Chinese Junior College">Anglo-Chinese Junior College</ion-select-option>
+          <ion-select-option value="Catholic Junior College">Catholic Junior College</ion-select-option>
+          <ion-select-option value="Hwa Chong Institution">Hwa Chong Institution</ion-select-option>
+          <ion-select-option value="Tampines Meridan Junior College">Tampines Meridan Junior College</ion-select-option>
+          <ion-select-option value="Millennia Institute">Millennia Institute</ion-select-option>
+          <ion-select-option value="Nanyang Junior College">Nanyang Junior College</ion-select-option>
+          <ion-select-option value="National Junior College">National Junior College</ion-select-option>
+          <ion-select-option value="Jurong Pioneer Junior College">Jurong Pioneer Junior College</ion-select-option>
+          <ion-select-option value="St. Andrews Junior College">St. Andrews Junior College</ion-select-option>
+          <ion-select-option value="Temasek Junior College">Temasek Junior College</ion-select-option>
+          <ion-select-option value="Victoria Junior College">Victoria Junior College</ion-select-option>
+          <ion-select-option value="Yishun Innova Junior College">Yishun Innova Junior College</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+
+
+  <ion-button expand="full" [disabled]="disabled" (click)="submit()">
+    Update
+  </ion-button>
+  </div>
+
+
+</ion-content>

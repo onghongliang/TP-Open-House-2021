@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Minecraft</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card-content class="top-msg">
+    <img id="bee" src="../../../assets/gif/mc1.gif">
+    <img id="goat" src="../../../assets/gif/mc2.gif">
+    <!-- <img src="https://firebasestorage.googleapis.com/v0/b/tp-open-house-2021.appspot.com/o/minecraftBackground.jpg?alt=media&token=d4785795-149a-4038-b5d4-935e3a71da4b"/> -->
+    <div class="card-title">
+      <h3 class="ion-text-center">
+        Our students have re-created our beautiful campus in Minecraft!
+        Check out the short videos below to find out more!
+      </h3>
+    </div>
+  </ion-card-content>
+
+  <div class="list-video">
+
+    <ion-card *ngFor="let v of listVid">
+
+      <ion-card-header>
+
+        <ion-card-title>{{v.title}}</ion-card-title>
+      </ion-card-header>
+      <iframe width="560" height="315" [src]="v.videolink" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <ion-card-content>
+        {{v.description}}
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+
+</ion-content>

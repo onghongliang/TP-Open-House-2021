@@ -1,0 +1,31 @@
+<ion-content>
+
+
+    <ion-text>
+        <h3 class="title">{{onData.title}}</h3>
+        <iframe *ngIf="onData.watch.youtube" width="560" height="315" [src]="onData.watch.youtube" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-text>
+
+    <div>
+        <ion-card-content>
+            <p style="font-weight: bold; text-align: justify; line-height: 1.5; padding-right: 0;">{{onData.synopsis}}</p>
+            <p>{{onData.realdate}}, {{onData.time}}</p>
+            <div>
+                Tags: <ion-chip color="primary" *ngFor="let i of onData.category">{{i}}</ion-chip>
+            </div>
+            
+            <div class="non-working" *ngIf="onData.watch.youtube2">
+                <p>Not Working?</p>
+                <ion-chip outline color="primary" (click) = "openLive(onData.watch.youtube2)">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    <ion-label>Click Here!</ion-label>
+                  </ion-chip>
+            </div>
+            
+            <div *ngIf="!onData.watch.youtube && !onData.watch.youtube2 && !onData.watch.facebook && !onData.watch.teams">
+                <p>Link not available yet. If this message still appears on the day, please visit <a (click) = "openIAB()">https://www.tp.edu.sg/joinoursquad/voh-events.html</a> 
+            </div>
+        </ion-card-content>
+    </div>
+</ion-content>

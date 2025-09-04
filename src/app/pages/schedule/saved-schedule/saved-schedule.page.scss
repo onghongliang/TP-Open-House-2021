@@ -1,0 +1,27 @@
+.left {
+    padding-left: 10px;
+    width: 30%;
+    margin: auto;
+    h4 { margin: 0;}
+    color: black;
+}
+.right {
+    width: 70%;
+    color: black;
+}
+
+ion-card-content {
+    display: flex;
+}
+
+ion-chip {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+}

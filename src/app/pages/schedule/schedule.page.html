@@ -1,0 +1,103 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Schedule</ion-title>
+    <ion-buttons [routerLink]="'/schedulenoti'" slot="end" style="margin-right: 1em;">
+      <ion-badge color="tertiary" *ngIf="saved.length > 0">{{saved.length}}</ion-badge>
+      <ion-icon size="large" style="color: white;" name="bookmark"></ion-icon>
+    </ion-buttons>
+
+  </ion-toolbar>
+  
+  <ion-toolbar color=primary>
+    <ion-segment scrollable="true" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="Day 1">
+        <ion-label>7 Jan</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="Day 2">
+        <ion-label>8 Jan</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="Day 3">
+        <ion-label>9 Jan</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="padding-left: 5px; font-style: italic;">*Swipe left to save schedule</div>
+  <div *ngIf="department !=='All' || cate !=='All'" style="padding: 10px">
+    <h4 style="display: contents;">Filter:</h4>
+    <ion-chip *ngIf="department !== 'All'" color="tertiary">
+      <ion-label>Department: {{department}}</ion-label>
+      <ion-icon (click)="removeDep()" name="close-circle"></ion-icon>
+    </ion-chip>
+    <ion-chip *ngIf="cate !== 'All'" color="success">
+      <ion-label>Category: {{cate}}</ion-label>
+      <ion-icon (click)="removeCat()" name="close-circle"></ion-icon>
+    </ion-chip>
+  </div>
+  <div style="width: 100%; margin-top: 2em;" *ngIf="coursesList.length == 0">
+    <h2 style="text-align: center;">Couldn't find any course :(</h2>
+  </div>
+
+
+  <div>
+    <ion-list lines="full" style="padding: 0; margin-bottom: 6em;">
+      <div @fadein class="list" *ngFor="let info of coursesList">
+
+        <ion-item-sliding #slidingItem style="padding: 0">
+          <ion-item class="list-item">
+            <ion-label class="left">
+              <s style="font-size:14px" *ngIf="info.pass">{{info.time}}</s>
+              <p *ngIf="!info.pass">{{info.time}}</p>
+            </ion-label>
+
+            <ion-label class="right ion-text-wrap">
+              <h3>{{ info.name }}</h3>
+              <p>Available on: {{info.location}}</p>
+              <p style="display: none;">Type: {{info.school}}</p>
+              <!-- <h5>{{info.info}}</h5> -->
+              <p *ngIf="info.link" style="color: red;"><b>Click to sign up!</b></p>
+              <div>
+                <!-- <ion-icon *ngIf="info.watch.youtube"  id="logo-youtube" name="logo-youtube"></ion-icon>
+                <ion-icon *ngIf="info.watch.facebook"  id="logo-fb" name="logo-facebook"></ion-icon> -->
+                <img *ngIf="info.watch.youtube" id="logo-youtube" width="34" height="32"
+                  src="../../../assets/icon/youtube.png">
+                <img *ngIf="info.watch.facebook" id="logo-facebook" width="34" height="32"
+                  src="../../../assets/icon/facebook.png">
+                <img *ngIf="info.watch.teams" id="logo-teams" width="34" height="32"
+                  src="../../../assets/icon/teams.png">
+              </div>
+              <div style="width: 100%;">
+                <ion-chip id="more-info" (click)="viewModal(info)">
+                  <ion-label style="text-align: end; font-size: 12px; color: grey;">More Info</ion-label>
+                </ion-chip>
+              </div>
+
+            </ion-label>
+          </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option [disabled]="info.pass" color="tertiary" (click)="addSche(slidingItem,info)">
+              <ion-icon *ngIf="!info.pass" slot="icon-only" name="add"></ion-icon>
+              <p *ngIf="info.pass">Event Ended</p>
+            </ion-item-option>
+          </ion-item-options>
+
+        </ion-item-sliding>
+
+      </div>
+    </ion-list>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentModal()">
+      <ion-icon name="filter"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

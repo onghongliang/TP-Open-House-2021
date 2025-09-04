@@ -1,0 +1,132 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Getting to TP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+      <!-- <ion-fab class="toggle-map" vertical="top" horizontal="end" slot="fixed" [routerLink]="'/google-map'">
+        <ion-fab-button class="fab-map">
+          <ion-icon id="fabDirections" name="pin"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <div class="add-image"> -->
+          <!-- <ion-card-header><strong>Address</strong></ion-card-header> -->
+          <!-- <ion-card-content style="padding: 0 !important; margin: 0 0 0 5px !important;">
+            <p><strong>Address:</strong></p>
+            <p>Tampines Ave 1, Singapore 529757</p>
+          </ion-card-content>
+        </div>
+  </div> -->
+
+
+
+  <ion-card>
+    <!-- <div style="position: relative">
+      <img src="../assets/imgs/location_map.jpg" />
+      <ion-fab vertical="top" horizontal="end" slot="fixed" [routerLink]="'/google-map'">
+        <ion-fab-button class="fab-map">
+          <ion-icon id="fabDirections" name="pin"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </div> -->
+    <img (click)="view()" src="../assets/location_map.jpg" />
+    <ion-card-header><strong>Address</strong></ion-card-header>
+    <ion-card-content>
+      21 Tampines Ave 1, Singapore 529757
+      <div class="button" style="margin: 0; padding: 0.5em 0 0;">
+        <ion-button routerLink="/direction" fill="outline" expand="block">Directions to TP</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <!-- BY BUS -->
+  <ion-card  >
+    <ion-item lines="none">
+      <ion-label>
+        <ion-card-header><strong>By Bus</strong></ion-card-header>
+      </ion-label>
+      <ion-icon name="bus"></ion-icon>
+    </ion-item>
+    <ion-card-content>
+      <b>Bus 8</b> from Tampines Bus Interchange / Toa Payoh Bus Interchange
+      <br><br>
+      <b>Bus 15</b> from Paris Ris Bus Interchange / Marine Parade Road
+      <br><br>
+      <b>Bus 23</b> from Tampines Bus Interchange / Rochor MRT Station
+      <br><br>
+      <b>Bus 69</b> from Tampines Bus Interchange / Bedok Bus Interchange
+      <br><br>
+      <b>Bus 118</b> from Punggol Bus Interchange / Changi Business Park Bus Terminal
+      <br><br>
+      <b>Bus 129</b> from Tampines Concourse Bus Interchange / St Michael's Bus Terminal
+      <br><br>
+      <b>Bus 518</b> from Pasir Ris Bus Interchange / Bayfront Ave
+    </ion-card-content>
+  </ion-card>
+  <!-- BY MRT -->
+  <ion-card >
+    <ion-item lines="none">
+      <ion-label>
+        <ion-card-header><strong>By MRT</strong></ion-card-header>
+      </ion-label>
+      <ion-icon name="train"></ion-icon>
+    </ion-item>
+
+    <ion-card-content>
+      Alight @ <b>Tampines MRT Station</b>, and transfer to Bus 8, 23, 69 at the Tampines Bus
+      Interchange or 129 at Tampines Concourse Bus Interchange
+      <br><br>
+      Alight @ <b>Bedok MRT Station</b>, and transfer to Bus 69 at the Bedok Bus Interchange
+      <br><br>
+      Alight @ <b>Tampines West MRT Station</b> and walk over to campus
+    </ion-card-content>
+  </ion-card>
+
+  <!-- BY CAR -->
+  <ion-card class="stick">
+    <ion-item lines="none">
+      <ion-label>
+        <ion-card-header><strong>By Car</strong></ion-card-header>
+      </ion-label>
+      <ion-icon name="car"></ion-icon>
+    </ion-item>
+    <ion-card-content>
+      <b>PIE from the East</b>
+      <br>
+      Get off the expressway from Exit 4B into Tampines North Flyover
+      <br>
+      Go straight into Simei Avenue
+      <br>
+      Turn left into Tampines Avenue 1
+      <br><br>
+      <b>PIE from the West</b>
+      <br>
+      Get off the expressway from Exit 8B (Bedok Reservoir)
+      <br>
+      Go straight into Bedok North Road and then into Tampines Avenue 10
+      <br>
+      Turn right into Tampines Ave 1
+      <br><br>
+      <b>ECP</b>
+      <br>
+      Turn into Xilin Avenue towards Simei Avenue
+      <br>
+      Turn left into Tampines Ave 1
+      <br><br>
+      <b>TPE</b>
+      <br>
+      Come out from Exit 5 into Tampines Ave 10
+      <br>
+      Turn left into Tampines Ave 1
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

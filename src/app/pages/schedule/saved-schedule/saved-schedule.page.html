@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Saved Schedule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-sliding *ngFor="let s of notis" >
+    <ion-item lines="none">
+      <ion-card style="width: 100%;">
+        <ion-card-content>
+          <div class="left">
+            <h4 *ngIf="s.pass" style="text-decoration: line-through;">{{s.time}}</h4>
+            <h4 *ngIf="!s.pass">{{s.time}}</h4>
+          </div>
+          <div class="right">
+            <p style="font-weight: bold;">{{s.name}}</p>
+            <p>{{s.realdate}}</p>
+          </div>
+        </ion-card-content>
+        <ion-chip color="secondary" (click)="viewModal(s)">
+          <ion-label>View Details</ion-label>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-chip>
+      </ion-card>
+
+
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option (click)="remove(s.id)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+</ion-content>

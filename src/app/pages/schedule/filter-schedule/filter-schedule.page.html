@@ -1,0 +1,39 @@
+<ion-content>
+
+  <ion-item>
+    <ion-label>Department</ion-label>
+    <ion-select value="{{department}}" (ionChange)="onChangeDep($event)" [(ngModel)]="department">
+      <ion-select-option value="All">All</ion-select-option>
+      <ion-select-option value="Temasek Polytechnic Event">Temasek Polytechnic Event</ion-select-option>
+      <ion-select-option value="Applied Science">Applied Science</ion-select-option>
+      <ion-select-option value="Business">Business</ion-select-option>
+      <ion-select-option value="Design">Design</ion-select-option>
+      <ion-select-option value="Engineering">Engineering</ion-select-option>
+      <ion-select-option value="Humanities & Social Science">Humanities & Social Science</ion-select-option>
+      <ion-select-option value="Informatics & IT">Informatics & IT</ion-select-option>
+      <ion-select-option value="PFP">PFP</ion-select-option>
+      <ion-select-option value="CCA">CCA</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-select value="{{category}}" (ionChange)="onChangeCat($event)" [(ngModel)]="category">
+      <ion-select-option value="All">All</ion-select-option>
+      <ion-select-option value="Career Talk">Career Talk </ion-select-option>
+      <ion-select-option value="CCA Sharing">CCA Sharing</ion-select-option>
+      <ion-select-option value="Diploma Workshop">Diploma Workshop</ion-select-option>
+      <ion-select-option value="Diploma Showcase">Diploma Showcase</ion-select-option>
+      <ion-select-option value="Diploma Talk">Diploma Talk</ion-select-option>
+      <ion-select-option value="Industry Talk">Industry Talk</ion-select-option>
+      <ion-select-option value="School Talk">School Talk</ion-select-option>
+      <ion-select-option value="School Workshop">School Workshop</ion-select-option>
+      <ion-select-option value="Student Sharing">Student Sharing</ion-select-option>
+      <ion-select-option value="Student Sharing [PFP]">Student Sharing [PFP]</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button (click)="dismiss()">
+    Filter
+  </ion-button>
+</ion-content>

@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Leaderboard</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-segment scrollable="true" [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="0">
+        <ion-label>Top Individual</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="1">
+        <ion-label>Top School</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+    <ion-slide >
+        <ion-card-content  *ngIf="topInd.length == 0" class="ion-text-center">
+          <h2>
+            No player available at the moment
+          </h2>
+        </ion-card-content>
+
+      <!-- TOP 5 INDI -->
+      <ion-card *ngFor="let people of topInd; index as i" [ngClass]="{'border animate__animated animate__rubberBand' : position == i && segment == 0}" >
+        <img class="winning" *ngIf="i == 0" src="../../../assets/icon/winning.svg">
+        <img class="winning" *ngIf="i == 1" src="../../../assets/icon/winning.svg">
+        <img class="winning" *ngIf="i == 2" src="../../../assets/icon/winning.svg">
+
+        <h4 class="card-bg-{{i}}" id="pos">#{{i+1}}</h4>
+        <ion-item lines="none" class="card-bg-{{i}}">
+          <ion-avatar *ngIf="people.uid">
+            <img [src]="people.uid"> 
+          </ion-avatar>
+          <ion-avatar *ngIf="!people.uid">
+            <img src="../../../assets/icon/random-2.jpg"> 
+          </ion-avatar>
+          <ion-label style="padding-left: 4px;">{{people.name}}</ion-label>
+          <div id="score" slot="end">{{people.points}}</div>
+        </ion-item>
+      </ion-card>
+
+      <!-- NOT IN TOP 5 -->
+      <div *ngIf="position > 10">
+       
+
+          <h3>You are now at {{position + 1}} place!</h3>
+        <ion-card [ngClass]="{'border animate__animated animate__rubberBand' : segment == 0}">
+          <ion-item lines="none">
+            <ion-label>#{{position + 1}} {{yourscore.name}}</ion-label>
+            <div id="score" slot="end">{{yourscore.points}}</div>
+          </ion-item>
+        </ion-card>
+      </div>
+      <!-- Not Logged in -->
+      <div class="guest" *ngIf="!id">
+       <ion-card-content>
+        <h3>You are now in guest mode, register/login to play Hunt-n-Win!</h3>
+       </ion-card-content>
+      </div>
+
+
+    <!-- <div id="ttPlayers">
+      <p >Total individuals: {{numberofInd}}</p>
+    </div> -->
+    </ion-slide>
+    <ion-slide >
+      <ion-card-content  *ngIf="topSchl.length == 0" class="ion-text-center">
+        <h2>
+          No player available at the moment
+        </h2>
+      </ion-card-content>
+      <!-- TOP SCHOOL -->
+      <ion-card *ngFor="let sch of topSchl; index as i" [ngClass]="{'border animate__animated animate__rubberBand' : schlPosition == i && segment == 1}" >
+        <img class="winning" *ngIf="i == 0" src="../../../assets/icon/winning.svg">
+        <img class="winning" *ngIf="i == 1" src="../../../assets/icon/winning.svg">
+        <img class="winning" *ngIf="i == 2" src="../../../assets/icon/winning.svg">
+        <ion-item lines="none" class="card-bg-{{i}}">
+          <ion-label>#{{i+1}} {{sch.school}}</ion-label>
+          <div id="score" slot="end">{{sch.points}}</div>
+        </ion-item>
+      </ion-card>
+
+
+      <div *ngIf="schlPosition > 10 && yourschool">
+        <h3>Your school is at {{schlPosition + 1}} place!</h3>
+        <ion-card [ngClass]="{'border animate__animated animate__rubberBand' : segment == 1}">
+          <ion-item lines="none">
+            <ion-label>#{{schlPosition + 1}} {{yourschool.school}}</ion-label>
+            <div id="score" slot="end">{{yourschool.points}}</div>
+          </ion-item>
+        </ion-card>
+      </div>
+
+      <ion-card-content class="guest" *ngIf="!id">
+        <div class="ion-text-center">
+          <h3>You are now in guest mode, register/login to play Hunt-n-Win!</h3>
+        </div>
+      </ion-card-content>
+     
+
+
+      <!-- <div id="ttPlayers">
+        <p >Total schools: {{numberofSchl}}</p>
+      </div> -->
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

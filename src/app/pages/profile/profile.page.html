@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar class="card-header-bg">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="main" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="'/settings'">
+        <ion-icon name="settings" style="width: 30px; height: 30px; color: white;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <img src="../assets/fake_person.jpg" class="center" *ngIf = "usercurrentimage == null">
+  <img src="{{usercurrentimage}}" class="center" *ngIf = "usercurrentimage != null">
+  <!-- <ion-button (click) = "uploadtype()">Upload Image</ion-button> -->
+
+  <div>
+    <p class="heading-1">Name</p>
+    <p class="subheading">{{user.displayName ? user.displayName : ""}}</p>
+    <p class="heading">Email</p>
+    <p class="subheading">{{user.email ? user.email : ""}}</p>
+    <!-- <p>Password: {{userPass}}</p> -->
+    <p class="heading">You are a</p>
+    <p class="subheading">{{usertype}}</p>
+    <p class="heading">School</p>
+    <p class="subheading">{{userschool}}</p>
+    <p class="heading">Game Points</p>
+    <p class="subheading">{{points}}</p>
+  </div>
+
+</ion-content>
